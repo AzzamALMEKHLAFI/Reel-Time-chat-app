@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "mektup";
+  src: url("fonts/mektup.eot?e5nrd7");
+  src: url("fonts/mektup.eot?e5nrd7#iefix") format("embedded-opentype"),
+    url("fonts/mektup.ttf?e5nrd7") format("truetype"),
+    url("fonts/mektup.woff?e5nrd7") format("woff"),
+    url("fonts/mektup.svg?e5nrd7#mektup") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="simge-"],
+[class*=" simge-"] {
+  font-family: "mektup" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.simge-ekle:before {
+  content: "\e949";
+}
+.simge-konusmalar:before {
+  content: "\e970";
+}
+.simge-kullanicilar:before {
+  content: "\e972";
+}
+.simge-giris:before {
+  content: "\ea13";
+}
+.simge-cikis:before {
+  content: "\ea14";
+}
+.simge-ilerle:before {
+  content: "\ea34";
+}
