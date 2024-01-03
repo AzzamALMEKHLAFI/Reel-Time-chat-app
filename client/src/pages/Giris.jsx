@@ -1,3 +1,4 @@
+import host from "../ayar";
 import React, { useRef, useState } from "react";
 import socket from "socket.io-client";
 import { useDispatch } from "react-redux";
@@ -10,7 +11,7 @@ const Giris = () => {
   const isimRef = useRef();
   const [isimVar, setIsimVar] = useState(false);
 
-  const io = socket("http://10.87.29.239:3000/giris");
+  const io = socket(`${host}/giris`);
 
   io.on("girisTamam", (cevap) => {
     if (cevap.durum && cevap.imza) {

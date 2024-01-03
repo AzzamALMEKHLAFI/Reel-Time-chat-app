@@ -49,7 +49,7 @@ const Mektuplar = () => {
             <Mektup
               key={id++}
               gonderici={
-                !kendi ? kullanicilar.get(mektup.gonderici).isim : "Sen"
+                !kendi ? kullanicilar.get(mektup.gonderici).isim : "Kendim"
               }
               muhteva={mektup.muhteva}
               tarih={hijriTarih(mektup.tarih)}

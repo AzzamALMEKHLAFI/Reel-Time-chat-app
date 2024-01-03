@@ -20,7 +20,6 @@ import {
 } from "../mahzen/durumlarSlice";
 
 const useSoket = () => {
-  const [oncekiMuhteva, oncekiMuhtevaAta] = useState("");
   const { soket, kullanici, oturum } = useSelector((state) => state.durumlar);
   const sevkEt = useDispatch();
 

@@ -1,5 +1,3 @@
-const konusmaBul = require("./konusmaBul");
-
 const kullaniciIslemleri = (socket, konusmalar, kullanicilar, kabulListesi) => {
   socket.emit("baglandi");
   socket.on("imza", (imza) => {
@@ -60,13 +58,7 @@ const kullaniciIslemleri = (socket, konusmalar, kullanicilar, kabulListesi) => {
         socket.emit("konusmanHazir", yeniKonusma);
         socket.broadcast.emit("yeniKonusma", yeniKonusma);
 
-        const ilgiliKonusma = konusmaBul(konusmalar, konusma);
-
-        if (ilgiliKonusma === undefined) {
-          konusmalar.set(sira, yeniKonusma);
-        } else {
-          ilgiliKonusma.uyeler.set(socket.id, socket);
-        }
+        konusmalar.set(sira, yeniKonusma);
       });
 
       socket.on("konusmayaGir", (konusma) => {

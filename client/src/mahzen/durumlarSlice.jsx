@@ -1,3 +1,4 @@
+import host from "../ayar";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { io } from "socket.io-client";
 
@@ -33,7 +34,7 @@ const durumlarSlice = createSlice({
         state.soket.close();
       }
 
-      state.soket = io(`http://10.87.29.239:3000/mektup`);
+      state.soket = io(`${host}/mektup`);
     },
     kullaniciGuncelle: (state, action) => {
       state.kullanici = {
