@@ -5,12 +5,12 @@ const kullaniciIslemleri = require("./islemler/kullaniciIslemleri");
 const io = new Server(null, {
   cors: {
     origin: [
-      "http://10.87.29.239:5173",
+      "http://10.87.25.127:5173",
       "http://127.0.0.1:5173",
       "http://localhost:5173",
       "http://localhost",
     ],
-    method: ["GET", "POST"],
+    method: ["GET","POST"],
   },
 });
 
